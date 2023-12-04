@@ -3,10 +3,11 @@ function isMobile() {
     return plataforms.test(navigator.userAgent);
   }
  
-function consoleLog(){  
+function downloadMethod(){  
     if (isMobile()) {
-        console.log("Mobile device detected");
+        deletedLink = document.getElementById("downloadLink");
     } else {
-        console.log("Desktop device detected");
+        deletedLink = document.getElementById("downloadQR");
     }
+    deletedLink.remove();
 }
