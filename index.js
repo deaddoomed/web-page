@@ -5,9 +5,10 @@ function isMobile() {
  
 function downloadMethod(){  
     if (isMobile()) {
-        deletedLink = document.getElementById("downloadQR");
+        document.getElementById("downloadQR").style.display = "none";
+        document.getElementById("downloadLink").style.display = "block";
     } else {
-        deletedLink = document.getElementById("downloadLink");
+        document.getElementById("downloadQR").style.display = "block";
+        document.getElementById("downloadLink").style.display = "none";
     }
-    deletedLink.remove();
 }
